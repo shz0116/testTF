@@ -7,6 +7,9 @@ import os
 def RandomDataset(args):
 
     features = {}
+    
+    # PROBLEM: what's the correct dataset format ?
+ 
     features["feature_one"] = tf.random.uniform(shape=(args.batch,args.em),maxval=args.features, dtype=tf.dtypes.int32)
     features["feature_two"] = tf.random.uniform(shape=(args.batch,args.em),maxval=args.features, dtype=tf.dtypes.int32)
     # features["feature_one"] = tf.random.uniform(shape=(args.batch,),maxval=args.features, dtype=tf.dtypes.int32)
