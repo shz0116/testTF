@@ -1,0 +1,1360 @@
+
+== check python3 ===================================================
+
+== check os platform ===============================================
+os: Linux
+os kernel version: #1 SMP Debian 4.19.118-2+deb10u1 (2020-06-07)
+os release version: 4.19.0-9-cloud-amd64
+os platform: Linux-4.19.0-9-cloud-amd64-x86_64-with-debian-10.5
+linux distribution: ('debian', '10.5', '')
+linux os distribution: ('debian', '10.5', '')
+mac version: ('', ('', '', ''), '')
+uname: uname_result(system='Linux', node='shan-tf1', release='4.19.0-9-cloud-amd64', version='#1 SMP Debian 4.19.118-2+deb10u1 (2020-06-07)', machine='x86_64', processor='')
+architecture: ('64bit', 'ELF')
+machine: x86_64
+
+
+== are we in docker =============================================
+No
+
+== compiler =====================================================
+c++ (Debian 8.3.0-6) 8.3.0
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+== check pips ===================================================
+protobuf                 3.12.2
+
+== check for virtualenv =========================================
+False
+
+== tensorflow import ============================================
+tf.version.VERSION = 2.3.0-dev20200620
+tf.version.GIT_VERSION = v1.12.1-34769-gfd2d4cdb70
+tf.version.COMPILER_VERSION = 7.3.1 20180303
+      5921:	find library=libcrypt.so.1 [0]; searching
+      5921:	 search cache=/etc/ld.so.cache
+      5921:	  trying file=/lib/x86_64-linux-gnu/libcrypt.so.1
+      5921:	
+      5921:	find library=libpthread.so.0 [0]; searching
+      5921:	 search cache=/etc/ld.so.cache
+      5921:	  trying file=/lib/x86_64-linux-gnu/libpthread.so.0
+      5921:	
+      5921:	find library=libdl.so.2 [0]; searching
+      5921:	 search cache=/etc/ld.so.cache
+      5921:	  trying file=/lib/x86_64-linux-gnu/libdl.so.2
+      5921:	
+      5921:	find library=libutil.so.1 [0]; searching
+      5921:	 search cache=/etc/ld.so.cache
+      5921:	  trying file=/lib/x86_64-linux-gnu/libutil.so.1
+      5921:	
+      5921:	find library=libexpat.so.1 [0]; searching
+      5921:	 search cache=/etc/ld.so.cache
+      5921:	  trying file=/lib/x86_64-linux-gnu/libexpat.so.1
+      5921:	
+      5921:	find library=libz.so.1 [0]; searching
+      5921:	 search cache=/etc/ld.so.cache
+      5921:	  trying file=/lib/x86_64-linux-gnu/libz.so.1
+      5921:	
+      5921:	find library=libm.so.6 [0]; searching
+      5921:	 search cache=/etc/ld.so.cache
+      5921:	  trying file=/lib/x86_64-linux-gnu/libm.so.6
+      5921:	
+      5921:	find library=libc.so.6 [0]; searching
+      5921:	 search cache=/etc/ld.so.cache
+      5921:	  trying file=/lib/x86_64-linux-gnu/libc.so.6
+      5921:	
+      5921:	
+      5921:	calling init: /lib/x86_64-linux-gnu/libpthread.so.0
+      5921:	
+      5921:	
+      5921:	calling init: /lib/x86_64-linux-gnu/libc.so.6
+      5921:	
+      5921:	
+      5921:	calling init: /lib/x86_64-linux-gnu/libm.so.6
+      5921:	
+      5921:	
+      5921:	calling init: /lib/x86_64-linux-gnu/libz.so.1
+      5921:	
+      5921:	
+      5921:	calling init: /lib/x86_64-linux-gnu/libexpat.so.1
+      5921:	
+      5921:	
+      5921:	calling init: /lib/x86_64-linux-gnu/libutil.so.1
+      5921:	
+      5921:	
+      5921:	calling init: /lib/x86_64-linux-gnu/libdl.so.2
+      5921:	
+      5921:	
+      5921:	calling init: /lib/x86_64-linux-gnu/libcrypt.so.1
+      5921:	
+      5921:	
+      5921:	initialize program: /usr/bin/python3
+      5921:	
+      5921:	
+      5921:	transferring control: /usr/bin/python3
+      5921:	
+      5921:	
+      5921:	calling init: /usr/lib/python3.7/lib-dynload/_opcode.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	find library=libffi.so.6 [0]; searching
+      5921:	 search cache=/etc/ld.so.cache
+      5921:	  trying file=/usr/lib/x86_64-linux-gnu/libffi.so.6
+      5921:	
+      5921:	
+      5921:	calling init: /usr/lib/x86_64-linux-gnu/libffi.so.6
+      5921:	
+      5921:	
+      5921:	calling init: /usr/lib/python3.7/lib-dynload/_ctypes.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	find library=libssl.so.1.1 [0]; searching
+      5921:	 search cache=/etc/ld.so.cache
+      5921:	  trying file=/usr/lib/x86_64-linux-gnu/libssl.so.1.1
+      5921:	
+      5921:	find library=libcrypto.so.1.1 [0]; searching
+      5921:	 search cache=/etc/ld.so.cache
+      5921:	  trying file=/usr/lib/x86_64-linux-gnu/libcrypto.so.1.1
+      5921:	
+      5921:	
+      5921:	calling init: /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1
+      5921:	
+      5921:	
+      5921:	calling init: /usr/lib/x86_64-linux-gnu/libssl.so.1.1
+      5921:	
+      5921:	
+      5921:	calling init: /usr/lib/python3.7/lib-dynload/_hashlib.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/lib/python3.7/lib-dynload/termios.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/lib/python3.7/lib-dynload/_csv.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	find library=libopenblasp-r0-ae94cfde.3.9.dev.so [0]; searching
+      5921:	 search path=/usr/local/lib/python3.7/dist-packages/numpy/core/../../numpy.libs/tls/haswell/x86_64:/usr/local/lib/python3.7/dist-packages/numpy/core/../../numpy.libs/tls/haswell:/usr/local/lib/python3.7/dist-packages/numpy/core/../../numpy.libs/tls/x86_64:/usr/local/lib/python3.7/dist-packages/numpy/core/../../numpy.libs/tls:/usr/local/lib/python3.7/dist-packages/numpy/core/../../numpy.libs/haswell/x86_64:/usr/local/lib/python3.7/dist-packages/numpy/core/../../numpy.libs/haswell:/usr/local/lib/python3.7/dist-packages/numpy/core/../../numpy.libs/x86_64:/usr/local/lib/python3.7/dist-packages/numpy/core/../../numpy.libs	(RPATH from file /usr/local/lib/python3.7/dist-packages/numpy/core/_multiarray_umath.cpython-37m-x86_64-linux-gnu.so)
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/numpy/core/../../numpy.libs/tls/haswell/x86_64/libopenblasp-r0-ae94cfde.3.9.dev.so
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/numpy/core/../../numpy.libs/tls/haswell/libopenblasp-r0-ae94cfde.3.9.dev.so
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/numpy/core/../../numpy.libs/tls/x86_64/libopenblasp-r0-ae94cfde.3.9.dev.so
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/numpy/core/../../numpy.libs/tls/libopenblasp-r0-ae94cfde.3.9.dev.so
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/numpy/core/../../numpy.libs/haswell/x86_64/libopenblasp-r0-ae94cfde.3.9.dev.so
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/numpy/core/../../numpy.libs/haswell/libopenblasp-r0-ae94cfde.3.9.dev.so
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/numpy/core/../../numpy.libs/x86_64/libopenblasp-r0-ae94cfde.3.9.dev.so
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/numpy/core/../../numpy.libs/libopenblasp-r0-ae94cfde.3.9.dev.so
+      5921:	
+      5921:	find library=libgfortran-2e0d59d6.so.5.0.0 [0]; searching
+      5921:	 search path=/usr/local/lib/python3.7/dist-packages/numpy/core/../../numpy.libs		(RPATH from file /usr/local/lib/python3.7/dist-packages/numpy/core/_multiarray_umath.cpython-37m-x86_64-linux-gnu.so)
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/numpy/core/../../numpy.libs/libgfortran-2e0d59d6.so.5.0.0
+      5921:	
+      5921:	find library=libquadmath-2d0c479f.so.0.0.0 [0]; searching
+      5921:	 search path=/usr/local/lib/python3.7/dist-packages/numpy/core/../../numpy.libs		(RPATH from file /usr/local/lib/python3.7/dist-packages/numpy/core/_multiarray_umath.cpython-37m-x86_64-linux-gnu.so)
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/numpy/core/../../numpy.libs/libquadmath-2d0c479f.so.0.0.0
+      5921:	
+      5921:	find library=libz-eb09ad1d.so.1.2.3 [0]; searching
+      5921:	 search path=/usr/local/lib/python3.7/dist-packages/numpy/core/../../numpy.libs		(RPATH from file /usr/local/lib/python3.7/dist-packages/numpy/core/_multiarray_umath.cpython-37m-x86_64-linux-gnu.so)
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/numpy/core/../../numpy.libs/libz-eb09ad1d.so.1.2.3
+      5921:	
+      5921:	find library=libgcc_s.so.1 [0]; searching
+      5921:	 search path=/usr/local/lib/python3.7/dist-packages/numpy/core/../../numpy.libs		(RPATH from file /usr/local/lib/python3.7/dist-packages/numpy/core/_multiarray_umath.cpython-37m-x86_64-linux-gnu.so)
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/numpy/core/../../numpy.libs/libgcc_s.so.1
+      5921:	 search cache=/etc/ld.so.cache
+      5921:	  trying file=/lib/x86_64-linux-gnu/libgcc_s.so.1
+      5921:	
+      5921:	
+      5921:	calling init: /lib/x86_64-linux-gnu/libgcc_s.so.1
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/numpy/core/../../numpy.libs/libz-eb09ad1d.so.1.2.3
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/numpy/core/../../numpy.libs/libquadmath-2d0c479f.so.0.0.0
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/numpy/core/../../numpy.libs/libgfortran-2e0d59d6.so.5.0.0
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/numpy/core/../../numpy.libs/libopenblasp-r0-ae94cfde.3.9.dev.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/numpy/core/_multiarray_umath.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/numpy/core/_multiarray_tests.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/numpy/linalg/lapack_lite.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/numpy/linalg/_umath_linalg.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	find library=libbz2.so.1.0 [0]; searching
+      5921:	 search cache=/etc/ld.so.cache
+      5921:	  trying file=/lib/x86_64-linux-gnu/libbz2.so.1.0
+      5921:	
+      5921:	
+      5921:	calling init: /lib/x86_64-linux-gnu/libbz2.so.1.0
+      5921:	
+      5921:	
+      5921:	calling init: /usr/lib/python3.7/lib-dynload/_bz2.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	find library=liblzma.so.5 [0]; searching
+      5921:	 search cache=/etc/ld.so.cache
+      5921:	  trying file=/lib/x86_64-linux-gnu/liblzma.so.5
+      5921:	
+      5921:	
+      5921:	calling init: /lib/x86_64-linux-gnu/liblzma.so.5
+      5921:	
+      5921:	
+      5921:	calling init: /usr/lib/python3.7/lib-dynload/_lzma.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	find library=libmpdec.so.2 [0]; searching
+      5921:	 search cache=/etc/ld.so.cache
+      5921:	  trying file=/usr/lib/x86_64-linux-gnu/libmpdec.so.2
+      5921:	
+      5921:	
+      5921:	calling init: /usr/lib/x86_64-linux-gnu/libmpdec.so.2
+      5921:	
+      5921:	
+      5921:	calling init: /usr/lib/python3.7/lib-dynload/_decimal.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/numpy/fft/_pocketfft_internal.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/numpy/random/mtrand.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/numpy/random/bit_generator.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/numpy/random/_common.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/numpy/random/_bounded_integers.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/numpy/random/_mt19937.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/numpy/random/_philox.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/numpy/random/_pcg64.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/numpy/random/_sfc64.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/numpy/random/_generator.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	find library=libstdc++.so.6 [0]; searching
+      5921:	 search cache=/etc/ld.so.cache
+      5921:	  trying file=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
+      5921:	
+      5921:	
+      5921:	calling init: /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+      5921:	
+      5921:	
+      5921:	
+      5921:	
+      5921:	
+      5921:	find library=libtensorflow_framework.so.2 [0]; searching
+      5921:	 search path=/usr/local/lib/python3.7/dist-packages/tensorflow/python/../../_solib_local/_U_S_Stensorflow_Clibtensorflow_Uframework_Uimport_Ulib___Utensorflow/tls/haswell/x86_64:/usr/local/lib/python3.7/dist-packages/tensorflow/python/../../_solib_local/_U_S_Stensorflow_Clibtensorflow_Uframework_Uimport_Ulib___Utensorflow/tls/haswell:/usr/local/lib/python3.7/dist-packages/tensorflow/python/../../_solib_local/_U_S_Stensorflow_Clibtensorflow_Uframework_Uimport_Ulib___Utensorflow/tls/x86_64:/usr/local/lib/python3.7/dist-packages/tensorflow/python/../../_solib_local/_U_S_Stensorflow_Clibtensorflow_Uframework_Uimport_Ulib___Utensorflow/tls:/usr/local/lib/python3.7/dist-packages/tensorflow/python/../../_solib_local/_U_S_Stensorflow_Clibtensorflow_Uframework_Uimport_Ulib___Utensorflow/haswell/x86_64:/usr/local/lib/python3.7/dist-packages/tensorflow/python/../../_solib_local/_U_S_Stensorflow_Clibtensorflow_Uframework_Uimport_Ulib___Utensorflow/haswell:/usr/local/lib/python3.7/dist-packages/tensorflow/python/../../_solib_local/_U_S_Stensorflow_Clibtensorflow_Uframework_Uimport_Ulib___Utensorflow/x86_64:/usr/local/lib/python3.7/dist-packages/tensorflow/python/../../_solib_local/_U_S_Stensorflow_Clibtensorflow_Uframework_Uimport_Ulib___Utensorflow:/usr/local/lib/python3.7/dist-packages/tensorflow/python/tls/haswell/x86_64:/usr/local/lib/python3.7/dist-packages/tensorflow/python/tls/haswell:/usr/local/lib/python3.7/dist-packages/tensorflow/python/tls/x86_64:/usr/local/lib/python3.7/dist-packages/tensorflow/python/tls:/usr/local/lib/python3.7/dist-packages/tensorflow/python/haswell/x86_64:/usr/local/lib/python3.7/dist-packages/tensorflow/python/haswell:/usr/local/lib/python3.7/dist-packages/tensorflow/python/x86_64:/usr/local/lib/python3.7/dist-packages/tensorflow/python:/usr/local/lib/python3.7/dist-packages/tensorflow/python/../tls/haswell/x86_64:/usr/local/lib/python3.7/dist-packages/tensorflow/python/../tls/haswell:/usr/local/lib/python3.7/dist-packages/tensorflow/python/../tls/x86_64:/usr/local/lib/python3.7/dist-packages/tensorflow/python/../tls:/usr/local/lib/python3.7/dist-packages/tensorflow/python/../haswell/x86_64:/usr/local/lib/python3.7/dist-packages/tensorflow/python/../haswell:/usr/local/lib/python3.7/dist-packages/tensorflow/python/../x86_64:/usr/local/lib/python3.7/dist-packages/tensorflow/python/..		(RPATH from file /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_tensorflow_internal.so)
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/tensorflow/python/../../_solib_local/_U_S_Stensorflow_Clibtensorflow_Uframework_Uimport_Ulib___Utensorflow/tls/haswell/x86_64/libtensorflow_framework.so.2
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/tensorflow/python/../../_solib_local/_U_S_Stensorflow_Clibtensorflow_Uframework_Uimport_Ulib___Utensorflow/tls/haswell/libtensorflow_framework.so.2
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/tensorflow/python/../../_solib_local/_U_S_Stensorflow_Clibtensorflow_Uframework_Uimport_Ulib___Utensorflow/tls/x86_64/libtensorflow_framework.so.2
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/tensorflow/python/../../_solib_local/_U_S_Stensorflow_Clibtensorflow_Uframework_Uimport_Ulib___Utensorflow/tls/libtensorflow_framework.so.2
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/tensorflow/python/../../_solib_local/_U_S_Stensorflow_Clibtensorflow_Uframework_Uimport_Ulib___Utensorflow/haswell/x86_64/libtensorflow_framework.so.2
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/tensorflow/python/../../_solib_local/_U_S_Stensorflow_Clibtensorflow_Uframework_Uimport_Ulib___Utensorflow/haswell/libtensorflow_framework.so.2
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/tensorflow/python/../../_solib_local/_U_S_Stensorflow_Clibtensorflow_Uframework_Uimport_Ulib___Utensorflow/x86_64/libtensorflow_framework.so.2
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/tensorflow/python/../../_solib_local/_U_S_Stensorflow_Clibtensorflow_Uframework_Uimport_Ulib___Utensorflow/libtensorflow_framework.so.2
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/tensorflow/python/tls/haswell/x86_64/libtensorflow_framework.so.2
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/tensorflow/python/tls/haswell/libtensorflow_framework.so.2
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/tensorflow/python/tls/x86_64/libtensorflow_framework.so.2
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/tensorflow/python/tls/libtensorflow_framework.so.2
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/tensorflow/python/haswell/x86_64/libtensorflow_framework.so.2
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/tensorflow/python/haswell/libtensorflow_framework.so.2
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/tensorflow/python/x86_64/libtensorflow_framework.so.2
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/tensorflow/python/libtensorflow_framework.so.2
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/tensorflow/python/../tls/haswell/x86_64/libtensorflow_framework.so.2
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/tensorflow/python/../tls/haswell/libtensorflow_framework.so.2
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/tensorflow/python/../tls/x86_64/libtensorflow_framework.so.2
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/tensorflow/python/../tls/libtensorflow_framework.so.2
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/tensorflow/python/../haswell/x86_64/libtensorflow_framework.so.2
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/tensorflow/python/../haswell/libtensorflow_framework.so.2
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/tensorflow/python/../x86_64/libtensorflow_framework.so.2
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/tensorflow/python/../libtensorflow_framework.so.2
+      5921:	
+      5921:	find library=librt.so.1 [0]; searching
+      5921:	 search path=/usr/local/lib/python3.7/dist-packages/tensorflow/python:/usr/local/lib/python3.7/dist-packages/tensorflow/python/..		(RPATH from file /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_tensorflow_internal.so)
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/tensorflow/python/librt.so.1
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/tensorflow/python/../librt.so.1
+      5921:	 search cache=/etc/ld.so.cache
+      5921:	  trying file=/lib/x86_64-linux-gnu/librt.so.1
+      5921:	
+      5921:	
+      5921:	calling init: /lib/x86_64-linux-gnu/librt.so.1
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/tensorflow/python/../libtensorflow_framework.so.2
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_tensorflow_internal.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_tfe.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_tf_session.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_tf_stack.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/wrapt/_wrappers.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_utils.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_py_exception_registry.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_bfloat16.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_dtypes.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/tensorflow/python/framework/fast_tensor_util.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/tensorflow/python/profiler/internal/_pywrap_traceme.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_op_def_registry.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/lib/python3.7/lib-dynload/_queue.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_events_writer.so
+      5921:	
+      5921:	find library=libuuid.so.1 [0]; searching
+      5921:	 search cache=/etc/ld.so.cache
+      5921:	  trying file=/lib/x86_64-linux-gnu/libuuid.so.1
+      5921:	
+      5921:	
+      5921:	calling init: /lib/x86_64-linux-gnu/libuuid.so.1
+      5921:	
+      5921:	
+      5921:	calling init: /usr/lib/python3.7/lib-dynload/_uuid.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_file_io.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/tensorflow/python/profiler/internal/_pywrap_profiler.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_record_io.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_checkpoint_reader.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_py_func.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/tensorflow/python/data/experimental/service/_pywrap_server_lib.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/lib/python3.7/lib-dynload/_json.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/lib/python3.7/lib-dynload/_ssl.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_device_lib.so
+      5921:	
+      5921:	find library=libhdf5-978d01a9.so.103.0.0 [0]; searching
+      5921:	 search path=/usr/local/lib/python3.7/dist-packages/h5py/.libs/tls/haswell/x86_64:/usr/local/lib/python3.7/dist-packages/h5py/.libs/tls/haswell:/usr/local/lib/python3.7/dist-packages/h5py/.libs/tls/x86_64:/usr/local/lib/python3.7/dist-packages/h5py/.libs/tls:/usr/local/lib/python3.7/dist-packages/h5py/.libs/haswell/x86_64:/usr/local/lib/python3.7/dist-packages/h5py/.libs/haswell:/usr/local/lib/python3.7/dist-packages/h5py/.libs/x86_64:/usr/local/lib/python3.7/dist-packages/h5py/.libs		(RPATH from file /usr/local/lib/python3.7/dist-packages/h5py/_errors.cpython-37m-x86_64-linux-gnu.so)
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/h5py/.libs/tls/haswell/x86_64/libhdf5-978d01a9.so.103.0.0
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/h5py/.libs/tls/haswell/libhdf5-978d01a9.so.103.0.0
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/h5py/.libs/tls/x86_64/libhdf5-978d01a9.so.103.0.0
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/h5py/.libs/tls/libhdf5-978d01a9.so.103.0.0
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/h5py/.libs/haswell/x86_64/libhdf5-978d01a9.so.103.0.0
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/h5py/.libs/haswell/libhdf5-978d01a9.so.103.0.0
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/h5py/.libs/x86_64/libhdf5-978d01a9.so.103.0.0
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/h5py/.libs/libhdf5-978d01a9.so.103.0.0
+      5921:	
+      5921:	find library=libhdf5_hl-db841637.so.100.1.1 [0]; searching
+      5921:	 search path=/usr/local/lib/python3.7/dist-packages/h5py/.libs		(RPATH from file /usr/local/lib/python3.7/dist-packages/h5py/_errors.cpython-37m-x86_64-linux-gnu.so)
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/h5py/.libs/libhdf5_hl-db841637.so.100.1.1
+      5921:	
+      5921:	find library=libsz-1c7dd0cf.so.2.0.1 [0]; searching
+      5921:	 search path=/usr/local/lib/python3.7/dist-packages/h5py/.libs/./tls/haswell/x86_64:/usr/local/lib/python3.7/dist-packages/h5py/.libs/./tls/haswell:/usr/local/lib/python3.7/dist-packages/h5py/.libs/./tls/x86_64:/usr/local/lib/python3.7/dist-packages/h5py/.libs/./tls:/usr/local/lib/python3.7/dist-packages/h5py/.libs/./haswell/x86_64:/usr/local/lib/python3.7/dist-packages/h5py/.libs/./haswell:/usr/local/lib/python3.7/dist-packages/h5py/.libs/./x86_64:/usr/local/lib/python3.7/dist-packages/h5py/.libs/.		(RPATH from file /usr/local/lib/python3.7/dist-packages/h5py/.libs/libhdf5-978d01a9.so.103.0.0)
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/h5py/.libs/./tls/haswell/x86_64/libsz-1c7dd0cf.so.2.0.1
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/h5py/.libs/./tls/haswell/libsz-1c7dd0cf.so.2.0.1
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/h5py/.libs/./tls/x86_64/libsz-1c7dd0cf.so.2.0.1
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/h5py/.libs/./tls/libsz-1c7dd0cf.so.2.0.1
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/h5py/.libs/./haswell/x86_64/libsz-1c7dd0cf.so.2.0.1
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/h5py/.libs/./haswell/libsz-1c7dd0cf.so.2.0.1
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/h5py/.libs/./x86_64/libsz-1c7dd0cf.so.2.0.1
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/h5py/.libs/./libsz-1c7dd0cf.so.2.0.1
+      5921:	
+      5921:	find library=libaec-2147abcd.so.0.0.4 [0]; searching
+      5921:	 search path=/usr/local/lib/python3.7/dist-packages/h5py/.libs/.		(RPATH from file /usr/local/lib/python3.7/dist-packages/h5py/.libs/libhdf5-978d01a9.so.103.0.0)
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/h5py/.libs/./libaec-2147abcd.so.0.0.4
+      5921:	
+      5921:	find library=libz-a147dcb0.so.1.2.3 [0]; searching
+      5921:	 search path=/usr/local/lib/python3.7/dist-packages/h5py/.libs/.		(RPATH from file /usr/local/lib/python3.7/dist-packages/h5py/.libs/libhdf5-978d01a9.so.103.0.0)
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/h5py/.libs/./libz-a147dcb0.so.1.2.3
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/h5py/.libs/./libz-a147dcb0.so.1.2.3
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/h5py/.libs/./libaec-2147abcd.so.0.0.4
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/h5py/.libs/./libsz-1c7dd0cf.so.2.0.1
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/h5py/.libs/libhdf5-978d01a9.so.103.0.0
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/h5py/.libs/libhdf5_hl-db841637.so.100.1.1
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/h5py/_errors.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/h5py/h5.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/h5py/defs.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/h5py/_objects.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/h5py/_conv.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/h5py/h5r.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/h5py/h5t.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/h5py/utils.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5929:	find library=libc.so.6 [0]; searching
+      5929:	 search cache=/etc/ld.so.cache
+      5929:	  trying file=/lib/x86_64-linux-gnu/libc.so.6
+      5929:	
+      5929:	
+      5929:	calling init: /lib/x86_64-linux-gnu/libc.so.6
+      5929:	
+      5929:	
+      5929:	initialize program: /bin/sh
+      5929:	
+      5929:	
+      5929:	transferring control: /bin/sh
+      5929:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/h5py/h5z.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/h5py/h5a.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/h5py/h5s.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/h5py/h5p.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/h5py/h5ac.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/h5py/_proxy.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/h5py/h5d.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/h5py/h5ds.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/h5py/h5f.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/h5py/h5g.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/h5py/h5i.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/h5py/h5fd.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/h5py/h5pl.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/h5py/h5o.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/h5py/h5l.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/scipy/_lib/_ccallback_c.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/scipy/_lib/_uarray/_uarray.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/scipy/fft/_pocketfft/pypocketfft.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/scipy/sparse/_sparsetools.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/scipy/sparse/_csparsetools.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/scipy/sparse/csgraph/_shortest_path.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/scipy/sparse/csgraph/_tools.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/scipy/sparse/csgraph/_traversal.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/scipy/sparse/csgraph/_min_spanning_tree.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/scipy/sparse/csgraph/_flow.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/scipy/sparse/csgraph/_matching.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/scipy/sparse/csgraph/_reordering.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/tslibs/conversion.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/tslibs/c_timestamp.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/tslibs/nattype.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/missing.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/tslibs/np_datetime.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/ops_dispatch.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/tslibs/timezones.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/tslibs/tzconversion.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/tslibs/timedeltas.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/tslibs/offsets.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/tslibs/ccalendar.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/tslibs/strptime.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/tslibs/fields.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/tslibs/parsing.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/tslibs/frequencies.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/tslibs/period.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/tslibs/timestamps.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/tslibs/resolution.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/hashtable.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/lib.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/tslib.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/interval.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/algos.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/properties.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/hashing.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/ops.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/index.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/join.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/sparse.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/indexing.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/writers.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/internals.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/lib/python3.7/lib-dynload/mmap.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/reshape.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/window/aggregations.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/window/indexers.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/groupby.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/reduction.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/parsers.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/json.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/pandas/_libs/testing.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_tf_optimizer.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_tf_cluster.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_tfprof.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_quantize_training.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_stacktrace_handler.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_util_port.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_debug_events_writer.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_mlir.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_python_op_gen.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/tensorflow/lite/experimental/microfrontend/python/ops/_audio_microfrontend_op.so
+      5921:	
+      5921:	/usr/local/lib/python3.7/dist-packages/tensorflow/lite/experimental/microfrontend/python/ops/_audio_microfrontend_op.so: error: symbol lookup error: undefined symbol: TfTpu_Initialize (fatal)
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_toco_api.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/tensorflow/lite/python/interpreter_wrapper/_pywrap_tensorflow_interpreter_wrapper.so
+      5921:	
+      5921:	find library=libjpeg-ba7bf5af.so.9.4.0 [0]; searching
+      5921:	 search path=/usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/tls/haswell/x86_64:/usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/tls/haswell:/usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/tls/x86_64:/usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/tls:/usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/haswell/x86_64:/usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/haswell:/usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/x86_64:/usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs		(RPATH from file /usr/local/lib/python3.7/dist-packages/PIL/_imaging.cpython-37m-x86_64-linux-gnu.so)
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/tls/haswell/x86_64/libjpeg-ba7bf5af.so.9.4.0
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/tls/haswell/libjpeg-ba7bf5af.so.9.4.0
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/tls/x86_64/libjpeg-ba7bf5af.so.9.4.0
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/tls/libjpeg-ba7bf5af.so.9.4.0
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/haswell/x86_64/libjpeg-ba7bf5af.so.9.4.0
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/haswell/libjpeg-ba7bf5af.so.9.4.0
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/x86_64/libjpeg-ba7bf5af.so.9.4.0
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/libjpeg-ba7bf5af.so.9.4.0
+      5921:	
+      5921:	find library=libopenjp2-b3d7668a.so.2.3.1 [0]; searching
+      5921:	 search path=/usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs		(RPATH from file /usr/local/lib/python3.7/dist-packages/PIL/_imaging.cpython-37m-x86_64-linux-gnu.so)
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/libopenjp2-b3d7668a.so.2.3.1
+      5921:	
+      5921:	find library=libtiff-41910f6d.so.5.5.0 [0]; searching
+      5921:	 search path=/usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs		(RPATH from file /usr/local/lib/python3.7/dist-packages/PIL/_imaging.cpython-37m-x86_64-linux-gnu.so)
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/libtiff-41910f6d.so.5.5.0
+      5921:	
+      5921:	find library=liblzma-99449165.so.5.2.5 [0]; searching
+      5921:	 search path=/usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/./tls/haswell/x86_64:/usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/./tls/haswell:/usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/./tls/x86_64:/usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/./tls:/usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/./haswell/x86_64:/usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/./haswell:/usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/./x86_64:/usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/.		(RPATH from file /usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/libtiff-41910f6d.so.5.5.0)
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/./tls/haswell/x86_64/liblzma-99449165.so.5.2.5
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/./tls/haswell/liblzma-99449165.so.5.2.5
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/./tls/x86_64/liblzma-99449165.so.5.2.5
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/./tls/liblzma-99449165.so.5.2.5
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/./haswell/x86_64/liblzma-99449165.so.5.2.5
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/./haswell/liblzma-99449165.so.5.2.5
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/./x86_64/liblzma-99449165.so.5.2.5
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/./liblzma-99449165.so.5.2.5
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/./liblzma-99449165.so.5.2.5
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/libjpeg-ba7bf5af.so.9.4.0
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/libtiff-41910f6d.so.5.5.0
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/libopenjp2-b3d7668a.so.2.3.1
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/PIL/_imaging.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/scipy/ndimage/_nd_image.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/scipy/ndimage/_ni_label.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	find library=libopenblasp-r0-34a18dc3.3.7.so [0]; searching
+      5921:	 search path=/usr/local/lib/python3.7/dist-packages/scipy/linalg/../.libs/tls/haswell/x86_64:/usr/local/lib/python3.7/dist-packages/scipy/linalg/../.libs/tls/haswell:/usr/local/lib/python3.7/dist-packages/scipy/linalg/../.libs/tls/x86_64:/usr/local/lib/python3.7/dist-packages/scipy/linalg/../.libs/tls:/usr/local/lib/python3.7/dist-packages/scipy/linalg/../.libs/haswell/x86_64:/usr/local/lib/python3.7/dist-packages/scipy/linalg/../.libs/haswell:/usr/local/lib/python3.7/dist-packages/scipy/linalg/../.libs/x86_64:/usr/local/lib/python3.7/dist-packages/scipy/linalg/../.libs		(RPATH from file /usr/local/lib/python3.7/dist-packages/scipy/linalg/_fblas.cpython-37m-x86_64-linux-gnu.so)
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/scipy/linalg/../.libs/tls/haswell/x86_64/libopenblasp-r0-34a18dc3.3.7.so
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/scipy/linalg/../.libs/tls/haswell/libopenblasp-r0-34a18dc3.3.7.so
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/scipy/linalg/../.libs/tls/x86_64/libopenblasp-r0-34a18dc3.3.7.so
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/scipy/linalg/../.libs/tls/libopenblasp-r0-34a18dc3.3.7.so
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/scipy/linalg/../.libs/haswell/x86_64/libopenblasp-r0-34a18dc3.3.7.so
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/scipy/linalg/../.libs/haswell/libopenblasp-r0-34a18dc3.3.7.so
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/scipy/linalg/../.libs/x86_64/libopenblasp-r0-34a18dc3.3.7.so
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/scipy/linalg/../.libs/libopenblasp-r0-34a18dc3.3.7.so
+      5921:	
+      5921:	find library=libgfortran-ed201abd.so.3.0.0 [0]; searching
+      5921:	 search path=/usr/local/lib/python3.7/dist-packages/scipy/linalg/../.libs		(RPATH from file /usr/local/lib/python3.7/dist-packages/scipy/linalg/_fblas.cpython-37m-x86_64-linux-gnu.so)
+      5921:	  trying file=/usr/local/lib/python3.7/dist-packages/scipy/linalg/../.libs/libgfortran-ed201abd.so.3.0.0
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/scipy/linalg/../.libs/libgfortran-ed201abd.so.3.0.0
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/scipy/linalg/../.libs/libopenblasp-r0-34a18dc3.3.7.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/scipy/linalg/_fblas.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/scipy/linalg/_flapack.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/scipy/linalg/_flinalg.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/scipy/linalg/_solve_toeplitz.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/scipy/linalg/_decomp_update.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/scipy/linalg/cython_blas.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling init: /usr/local/lib/python3.7/dist-packages/scipy/linalg/cython_lapack.cpython-37m-x86_64-linux-gnu.so
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/bin/python3 [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /lib/x86_64-linux-gnu/libcrypt.so.1 [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /lib/x86_64-linux-gnu/libutil.so.1 [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /lib/x86_64-linux-gnu/libexpat.so.1 [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /lib/x86_64-linux-gnu/libz.so.1 [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/lib/python3.7/lib-dynload/_opcode.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/lib/python3.7/lib-dynload/_ctypes.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/lib/x86_64-linux-gnu/libffi.so.6 [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/lib/python3.7/lib-dynload/_hashlib.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/lib/python3.7/lib-dynload/termios.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/lib/python3.7/lib-dynload/_csv.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/numpy/core/_multiarray_umath.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/numpy/core/_multiarray_tests.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/numpy/linalg/lapack_lite.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/numpy/linalg/_umath_linalg.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/numpy/core/../../numpy.libs/libopenblasp-r0-ae94cfde.3.9.dev.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/numpy/core/../../numpy.libs/libgfortran-2e0d59d6.so.5.0.0 [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/numpy/core/../../numpy.libs/libz-eb09ad1d.so.1.2.3 [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/numpy/core/../../numpy.libs/libquadmath-2d0c479f.so.0.0.0 [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/lib/python3.7/lib-dynload/_bz2.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /lib/x86_64-linux-gnu/libbz2.so.1.0 [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/lib/python3.7/lib-dynload/_lzma.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /lib/x86_64-linux-gnu/liblzma.so.5 [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/lib/python3.7/lib-dynload/_decimal.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/lib/x86_64-linux-gnu/libmpdec.so.2 [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/numpy/fft/_pocketfft_internal.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/numpy/random/mtrand.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/numpy/random/bit_generator.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/numpy/random/_common.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/numpy/random/_bounded_integers.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/numpy/random/_mt19937.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/numpy/random/_philox.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/numpy/random/_pcg64.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/numpy/random/_sfc64.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/numpy/random/_generator.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	
+      5921:	
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_tfe.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_tf_session.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_tf_stack.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/wrapt/_wrappers.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_utils.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_py_exception_registry.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_bfloat16.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_dtypes.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/tensorflow/python/framework/fast_tensor_util.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/tensorflow/python/profiler/internal/_pywrap_traceme.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_op_def_registry.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/lib/python3.7/lib-dynload/_queue.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_events_writer.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/lib/python3.7/lib-dynload/_uuid.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /lib/x86_64-linux-gnu/libuuid.so.1 [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_file_io.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/tensorflow/python/profiler/internal/_pywrap_profiler.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_record_io.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_checkpoint_reader.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_py_func.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/tensorflow/python/data/experimental/service/_pywrap_server_lib.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/lib/python3.7/lib-dynload/_json.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/lib/python3.7/lib-dynload/_ssl.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/lib/x86_64-linux-gnu/libssl.so.1.1 [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1 [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_device_lib.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/h5py/_errors.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/h5py/h5.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/h5py/defs.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/h5py/_objects.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/h5py/_conv.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/h5py/h5r.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/h5py/h5t.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/h5py/utils.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/h5py/h5z.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/h5py/h5a.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/h5py/h5s.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/h5py/h5p.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/h5py/h5ac.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/h5py/_proxy.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/h5py/h5d.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/h5py/h5ds.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/h5py/h5f.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/h5py/h5g.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/h5py/h5i.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/h5py/h5fd.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/h5py/h5pl.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/h5py/h5o.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/h5py/h5l.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/h5py/.libs/libhdf5_hl-db841637.so.100.1.1 [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/h5py/.libs/libhdf5-978d01a9.so.103.0.0 [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/h5py/.libs/./libsz-1c7dd0cf.so.2.0.1 [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/h5py/.libs/./libaec-2147abcd.so.0.0.4 [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/scipy/_lib/_ccallback_c.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/scipy/_lib/_uarray/_uarray.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/scipy/fft/_pocketfft/pypocketfft.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/scipy/sparse/_sparsetools.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/scipy/sparse/_csparsetools.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/scipy/sparse/csgraph/_shortest_path.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/scipy/sparse/csgraph/_tools.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/scipy/sparse/csgraph/_traversal.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/scipy/sparse/csgraph/_min_spanning_tree.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/scipy/sparse/csgraph/_flow.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/scipy/sparse/csgraph/_matching.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/scipy/sparse/csgraph/_reordering.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/tslibs/conversion.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/tslibs/c_timestamp.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/tslibs/nattype.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/missing.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/tslibs/np_datetime.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/ops_dispatch.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/tslibs/timezones.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/tslibs/tzconversion.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/tslibs/timedeltas.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/tslibs/offsets.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/tslibs/ccalendar.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/tslibs/strptime.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/tslibs/fields.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/tslibs/parsing.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/tslibs/frequencies.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/tslibs/period.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/tslibs/timestamps.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/tslibs/resolution.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/hashtable.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/lib.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/tslib.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/interval.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/algos.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/properties.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/hashing.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/ops.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/index.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/join.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/sparse.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/indexing.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/writers.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/internals.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/lib/python3.7/lib-dynload/mmap.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/reshape.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/window/aggregations.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/window/indexers.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/groupby.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/reduction.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/parsers.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/json.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/pandas/_libs/testing.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_tf_optimizer.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_tf_cluster.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_tfprof.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_quantize_training.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_stacktrace_handler.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_util_port.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_debug_events_writer.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_mlir.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_python_op_gen.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/tensorflow/lite/experimental/microfrontend/python/ops/_audio_microfrontend_op.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_toco_api.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/tensorflow/python/_pywrap_tensorflow_internal.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/tensorflow/lite/python/interpreter_wrapper/_pywrap_tensorflow_interpreter_wrapper.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/tensorflow/python/../libtensorflow_framework.so.2 [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/lib/x86_64-linux-gnu/libstdc++.so.6 [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /lib/x86_64-linux-gnu/libdl.so.2 [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/PIL/_imaging.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/libopenjp2-b3d7668a.so.2.3.1 [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/libtiff-41910f6d.so.5.5.0 [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/libjpeg-ba7bf5af.so.9.4.0 [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/h5py/.libs/./libz-a147dcb0.so.1.2.3 [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/PIL/../Pillow.libs/./liblzma-99449165.so.5.2.5 [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /lib/x86_64-linux-gnu/librt.so.1 [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/scipy/ndimage/_nd_image.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/scipy/ndimage/_ni_label.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/scipy/linalg/_fblas.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/scipy/linalg/_flapack.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/scipy/linalg/_flinalg.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/scipy/linalg/_solve_toeplitz.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/scipy/linalg/_decomp_update.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/scipy/linalg/cython_blas.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/scipy/linalg/cython_lapack.cpython-37m-x86_64-linux-gnu.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/scipy/linalg/../.libs/libopenblasp-r0-34a18dc3.3.7.so [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /usr/local/lib/python3.7/dist-packages/scipy/linalg/../.libs/libgfortran-ed201abd.so.3.0.0 [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /lib/x86_64-linux-gnu/libgcc_s.so.1 [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /lib/x86_64-linux-gnu/libm.so.6 [0]
+      5921:	
+      5921:	
+      5921:	calling fini: /lib/x86_64-linux-gnu/libpthread.so.0 [0]
+      5921:	
+
+== env ==========================================================
+LD_LIBRARY_PATH is unset
+DYLD_LIBRARY_PATH is unset
+
+== nvidia-smi ===================================================
+./tf_env_collect.sh: line 145: nvidia-smi: command not found
+
+== cuda libs  ===================================================
+
+== tensorflow installed from info ==================
+
+== python3 version  ==============================================
+(major, minor, micro, releaselevel, serial)
+(3, 7, 3, 'final', 0)
+
+== bazel version  ===============================================
+Build label: 0.28.1
+Build time: Fri Jul 19 15:19:51 2019 (1563549591)
+Build timestamp: 1563549591
+Build timestamp as int: 1563549591
+
