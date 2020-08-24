@@ -10,6 +10,11 @@
 #   TPU: total bytes 1006632960, mem bw 1683.631 GB/s
 #   TPU: total bytes 1006632960, mem bw 900.720 GB/s
 
+# 08/23/2020: 
+# add synchronizatio res.numpy()
+# now the results go back to original, a couple of GB/s
+#
+#
 import time
 import tensorflow as tf
 import itertools
@@ -165,6 +170,7 @@ def test_dense_lookup():
 
     t1 = 0.0
     t2 = 0.0
+    t3 = 0.0
     steps = args.steps
     warmups = args.warmups
     for i in range(0, args.steps+warmups):
@@ -173,8 +179,11 @@ def test_dense_lookup():
       end1 = time.time()
       res = tf.math.reduce_sum(tf.reshape(shard0[0], [batch, nnz, args.em]), axis=1)
       end2 = time.time()
-      print("Time is {0:.6f} {1:.6f} : ".format(end1 - start, end2 - start))
+      res.numpy()
+      end3 = time.time()
+      print("Time is {0:.6f} {1:.6f} {2:.6f} : ".format(end1 - start, end2 - start, end3 - start))
       if (i >= warmups):
+         t3 += end3 - start
          t2 += end2 - start
          t1 += end1 - start
     # for r in shard0:
@@ -186,9 +195,10 @@ def test_dense_lookup():
     total_bytes = args.batch * args.nnz * args.em * tf.float32.size
     print("Test batch = ", args.batch, " nnz = ", args.nnz, ", em = ", args.em)
     print("Lookup Shape: ", shard0[0].shape, " RES shape: ", res.shape)
-    print("TPU: total test time: {0:.6f} {1:.6f} seconds, for {2:6d} steps ".format(t1, t2, steps))
+    print("TPU: total test time: {0:.6f} {1:.6f} {2:.6f} seconds, for {3:6d} steps ".format(t1, t2, t3 steps))
     print("TPU: total bytes {0}, mem bw {1:.3f} GB/s".format(total_bytes, total_bytes*1.0*steps/t1/1.0e9))
     print("TPU: total bytes {0}, mem bw {1:.3f} GB/s".format(total_bytes, total_bytes*1.0*steps/t2/1.0e9))
+    print("TPU: total bytes {0}, mem bw {1:.3f} GB/s".format(total_bytes, total_bytes*1.0*steps/t3/1.0e9))
     
 test_dense_lookup()
 print("done")
