@@ -2,18 +2,22 @@
 # TENSORFLOW VERSION: '2.3.0-dev20200620'
 # Test command:
 #   export TPU_IP=
-#   python3  g2.py --features=1000000 --nnz=30 --em=128 --steps=4 --warmups=1 --batch=65536
+#   python3  TGTBT.py --features=1000000 --nnz=30 --em=128 --steps=4 --warmups=1 --batch=65536
 # Results:
 #   Test batch =  65536  nnz =  30 , em =  128
 #   Lookup Shape:  (1966080, 128)  RES shape:  (65536, 128)
-#   TPU: total test time: 0.002392 0.004470 seconds, for      4 steps 
-#   TPU: total bytes 1006632960, mem bw 1683.631 GB/s
-#   TPU: total bytes 1006632960, mem bw 900.720 GB/s
+#   TPU: total test time: 0.002157 0.004161 4.982476 seconds, for      4 steps 
+#   TPU: total bytes 1006632960, mem bw 1866.545 GB/s
+#   TPU: total bytes 1006632960, mem bw 967.656 GB/s
+#   TPU: total bytes 1006632960, mem bw 0.808 GB/s
 
-# 08/23/2020: 
-# add synchronizatio res.numpy()
-# now the results go back to original, a couple of GB/s
 #
+# The key question is : 1866.54 clearly > 900 GB/s, 
+# the peak mem bw indicated in Table 3 here
+# https://cacm.acm.org/magazines/2020/7/245702-a-domain-specific-supercomputer-for-training-deep-neural-networks/fulltext
+#
+# Do I need to use res.numpy() for synchronization ? and include the synchronization time , to use 0.808 as the bandwidth ?
+# Why res.numpy cause so big difference ?
 #
 import time
 import tensorflow as tf
@@ -195,7 +199,7 @@ def test_dense_lookup():
     total_bytes = args.batch * args.nnz * args.em * tf.float32.size
     print("Test batch = ", args.batch, " nnz = ", args.nnz, ", em = ", args.em)
     print("Lookup Shape: ", shard0[0].shape, " RES shape: ", res.shape)
-    print("TPU: total test time: {0:.6f} {1:.6f} {2:.6f} seconds, for {3:6d} steps ".format(t1, t2, t3 steps))
+    print("TPU: total test time: {0:.6f} {1:.6f} {2:.6f} seconds, for {3:6d} steps ".format(t1, t2, t3, steps))
     print("TPU: total bytes {0}, mem bw {1:.3f} GB/s".format(total_bytes, total_bytes*1.0*steps/t1/1.0e9))
     print("TPU: total bytes {0}, mem bw {1:.3f} GB/s".format(total_bytes, total_bytes*1.0*steps/t2/1.0e9))
     print("TPU: total bytes {0}, mem bw {1:.3f} GB/s".format(total_bytes, total_bytes*1.0*steps/t3/1.0e9))
