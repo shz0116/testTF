@@ -1,24 +1,14 @@
-
 # TENSORFLOW VERSION: '2.3.0-dev20200620'
 # Test command:
 #   export TPU_IP=
-#   python3  TGTBT.py --features=1000000 --nnz=30 --em=128 --steps=4 --warmups=1 --batch=65536
+#   python3  g2.py --features=1000000 --nnz=30 --em=128 --steps=4 --warmups=1 --batch=65536
 # Results:
 #   Test batch =  65536  nnz =  30 , em =  128
 #   Lookup Shape:  (1966080, 128)  RES shape:  (65536, 128)
-#   TPU: total test time: 0.002157 0.004161 4.982476 seconds, for      4 steps 
-#   TPU: total bytes 1006632960, mem bw 1866.545 GB/s
-#   TPU: total bytes 1006632960, mem bw 967.656 GB/s
-#   TPU: total bytes 1006632960, mem bw 0.808 GB/s
+#   TPU: total test time: 0.002392 0.004470 seconds, for      4 steps 
+#   TPU: total bytes 1006632960, mem bw 1683.631 GB/s
+#   TPU: total bytes 1006632960, mem bw 900.720 GB/s
 
-#
-# The key question is : 1866.54 clearly > 900 GB/s, 
-# the peak mem bw indicated in Table 3 here
-# https://cacm.acm.org/magazines/2020/7/245702-a-domain-specific-supercomputer-for-training-deep-neural-networks/fulltext
-#
-# Do I need to use res.numpy() for synchronization ? and include the synchronization time , to use 0.808 as the bandwidth ?
-# Why res.numpy cause so big difference ?
-#
 import time
 import tensorflow as tf
 import itertools
@@ -77,7 +67,7 @@ batch = args.batch
 nnz = args.nnz
 features = args.features
 
-feature_watched_values = np.random.randint(0, features, (batch * nnz * 2, ))
+feature_watched_values = np.random.randint(0, features, (batch * nnz * 4, ))
 # print("Feature: ", feature_watched_values)
 batch_size = batch * nnz 
 
@@ -85,6 +75,7 @@ batch_size = batch * nnz
 # feature_watched_row_lengths = [1, 2, 2, 1]
 
 resolver = None
+TIMES = 10
 
 # 126-129
 
@@ -93,7 +84,8 @@ def get_strategy():
    remote.connect_to_cluster(resolver)
    topology = tpu_strategy_util.initialize_tpu_system(resolver)
    print("Device coordinates: ", topology.device_coordinates)
-   device_assignment = tf.python.tpu.device_assignment.DeviceAssignment.build(topology,computation_shape=[1, 1, 1, 1],num_replicas=1)
+#   device_assignment = tf.python.tpu.device_assignment.DeviceAssignment.build(topology,computation_shape=[1, 1, 1, 1],num_replicas=1)
+   device_assignment = tf.python.tpu.device_assignment.DeviceAssignment.build(topology)
 
    return tpu_strategy.TPUStrategy(resolver, device_assignment=device_assignment)
 
@@ -120,9 +112,6 @@ def create_strategy_and_mid_level(optimizer_name):
        embedding = create_mid_level(optimizer=optimizer)
    return strategy, embedding, optimizer
 
-strategy, embedding, optimizer = create_strategy_and_mid_level('sgd')
-training = False
-
 def create_dense_input_fn(strategy, include_weights=False, weight=0.5):
     def input_fn(ctx):
       del ctx
@@ -148,19 +137,9 @@ def get_replica_numpy(structured, strategy, replica_id):
 
     return nest.map_structure(select_replica, structured)
 
-def test_dense_lookup():
-
-    # strategy, embedding, _ = create_strategy_and_mid_level('sgd')
-    input_fn = create_dense_input_fn(strategy)
-    dist = strategy.experimental_distribute_datasets_from_function(
-        input_fn,
-        options=distribute_lib.InputOptions(
-            experimental_prefetch_to_device=False))
-    dist_iter = iter(dist)
-
-    @def_function.function
-    def test_fn():
-      def step():
+@tf.function
+def test_fn():
+    def step():
         print("In STEPs")
         activation = embedding.dequeue()
         # print_op = tf.print(activation, output_stream=sys.stderr)
@@ -169,8 +148,24 @@ def test_dense_lookup():
         # tf.print(tensor, output_stream=sys.stderr)
         return activation
 
-      embedding.enqueue(next(dist_iter), training=False)
-      return strategy.run(step)
+    embedding.enqueue(next(dist_iter), training=False)
+    activation = strategy.run(step)
+    for j in tf.range(TIMES-1):
+        embedding.enqueue(next(dist_iter), training=False)
+        activation = strategy.run(step)
+    return  activation
+
+if __name__ == "__main__":
+
+    strategy, embedding, optimizer = create_strategy_and_mid_level('sgd')
+    training = False
+
+    input_fn = create_dense_input_fn(strategy)
+    dist = strategy.experimental_distribute_datasets_from_function(
+        input_fn,
+        options=distribute_lib.InputOptions(
+            experimental_prefetch_to_device=False))
+    dist_iter = iter(dist)
 
     t1 = 0.0
     t2 = 0.0
@@ -178,24 +173,33 @@ def test_dense_lookup():
     steps = args.steps
     warmups = args.warmups
 
+    # warmup 
     start = time.time()
-
-    for i in range(0, args.steps+warmups):
-      shard0 = get_replica_numpy(test_fn(), strategy, 0)
-      if (i == 0) :
-          res = tf.math.reduce_sum(tf.reshape(shard0[0], [batch, nnz, args.em]), axis=1)
-      else:
-          res += tf.math.reduce_sum(tf.reshape(shard0[0], [batch, nnz, args.em]), axis=1)
-
-    res.numpy()
+    res = get_replica_numpy(test_fn(), strategy, 0)
+    res[0].numpy()
     end = time.time()
-    t3 = end - start
+    t1 = end - start
+    print("TIME warmups {0:.6f} : ".format(t1))
+
+    # measure
+    start = time.time()
+    with tf.experimental.async_scope():
+        for _ in tf.range(steps):
+            res = test_fn()
+        res0 = get_replica_numpy(res, strategy, 0)
+
+    end = time.time()
+    t2 = end - start
+    res0[0].numpy()
+    end3 = time.time()
+    t3 = end3 - end
+    print("TIME measure : ", t2, + t3)
 
     total_bytes = args.batch * args.nnz * args.em * tf.float32.size
     print("Test batch = ", args.batch, " nnz = ", args.nnz, ", em = ", args.em)
-    print("Lookup Shape: ", shard0[0].shape, " RES shape: ", res.shape)
-    print("TPU: total bytes {0}, mem bw {1:.3f} GB/s".format(total_bytes, total_bytes*1.0*steps/t3/1.0e9))
+    print("Lookup Shape: ", res0[0].shape, " RES shape: ", res0[0].shape)
+    print("TPU: total test time: {0:.6f} {1:.6f} {2:.6f} seconds, for {3:6d} steps ".format(t1, t2, t3, steps))
+    print("TPU: total bytes {0}, mem bw {1:.3f} GB/s".format(total_bytes, total_bytes*1.0*steps*TIMES/(t2+t3)/1.0e9))
     
-test_dense_lookup()
-print("done")
+    print("done")
 
