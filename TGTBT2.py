@@ -3,11 +3,12 @@
 #   export TPU_IP=
 #   python3  g2.py --features=1000000 --nnz=30 --em=128 --steps=4 --warmups=1 --batch=65536
 # Results:
-#   Test batch =  65536  nnz =  30 , em =  128
-#   Lookup Shape:  (1966080, 128)  RES shape:  (65536, 128)
-#   TPU: total test time: 0.002392 0.004470 seconds, for      4 steps 
-#   TPU: total bytes 1006632960, mem bw 1683.631 GB/s
-#   TPU: total bytes 1006632960, mem bw 900.720 GB/s
+#   TIME measure :  4.037581205368042 0.14827895164489746
+#   Test batch =  8192  nnz =  30 , em =  128  times=  10
+#   Lookup Shape:  (245760, 128)  RES shape:  (245760, 128)
+#   TPU: total test time: 1.554379 4.037581 0.148279 seconds, for      4 steps 
+#   TPU: total bytes 125829120, mem bw 1.202 GB/s
+
 
 import time
 import tensorflow as tf
