@@ -47,6 +47,7 @@ parser.add_argument("--warmups", type=int, default=0)
 parser.add_argument("--randomseed", type=int, default=0)
 parser.add_argument("--testtpu", type=int, default=0)
 parser.add_argument("--verify", type=int, default=0)
+parser.add_argument("--times", type=int, default=1)
 
 args = parser.parse_args()
 
@@ -75,17 +76,14 @@ batch_size = batch * nnz
 # feature_watched_row_lengths = [1, 2, 2, 1]
 
 resolver = None
-TIMES = 10
-
-# 126-129
 
 def get_strategy():
    resolver = tpu_cluster_resolver.TPUClusterResolver(tpu="grpc://"+os.environ["TPU_IP"])
    remote.connect_to_cluster(resolver)
    topology = tpu_strategy_util.initialize_tpu_system(resolver)
    print("Device coordinates: ", topology.device_coordinates)
-#   device_assignment = tf.python.tpu.device_assignment.DeviceAssignment.build(topology,computation_shape=[1, 1, 1, 1],num_replicas=1)
-   device_assignment = tf.python.tpu.device_assignment.DeviceAssignment.build(topology)
+   device_assignment = tf.python.tpu.device_assignment.DeviceAssignment.build(topology,computation_shape=[1, 1, 1, 1],num_replicas=1)
+   # device_assignment = tf.python.tpu.device_assignment.DeviceAssignment.build(topology)
 
    return tpu_strategy.TPUStrategy(resolver, device_assignment=device_assignment)
 
@@ -138,7 +136,7 @@ def get_replica_numpy(structured, strategy, replica_id):
     return nest.map_structure(select_replica, structured)
 
 @tf.function
-def test_fn():
+def test_fn(TIMES):
     def step():
         print("In STEPs")
         activation = embedding.dequeue()
@@ -172,10 +170,10 @@ if __name__ == "__main__":
     t3 = 0.0
     steps = args.steps
     warmups = args.warmups
-
+ 
     # warmup 
     start = time.time()
-    res = get_replica_numpy(test_fn(), strategy, 0)
+    res = get_replica_numpy(test_fn(args.times), strategy, 0)
     res[0].numpy()
     end = time.time()
     t1 = end - start
@@ -185,7 +183,7 @@ if __name__ == "__main__":
     start = time.time()
     with tf.experimental.async_scope():
         for _ in tf.range(steps):
-            res = test_fn()
+            res = test_fn(args.times)
         res0 = get_replica_numpy(res, strategy, 0)
 
     end = time.time()
@@ -193,13 +191,13 @@ if __name__ == "__main__":
     res0[0].numpy()
     end3 = time.time()
     t3 = end3 - end
-    print("TIME measure : ", t2, + t3)
+    print("TIME measure : ", t2, t3)
 
     total_bytes = args.batch * args.nnz * args.em * tf.float32.size
-    print("Test batch = ", args.batch, " nnz = ", args.nnz, ", em = ", args.em)
+    print("Test batch = ", args.batch, " nnz = ", args.nnz, ", em = ", args.em, " times= ", args.times)
     print("Lookup Shape: ", res0[0].shape, " RES shape: ", res0[0].shape)
     print("TPU: total test time: {0:.6f} {1:.6f} {2:.6f} seconds, for {3:6d} steps ".format(t1, t2, t3, steps))
-    print("TPU: total bytes {0}, mem bw {1:.3f} GB/s".format(total_bytes, total_bytes*1.0*steps*TIMES/(t2+t3)/1.0e9))
+    print("TPU: total bytes {0}, mem bw {1:.3f} GB/s".format(total_bytes, total_bytes*1.0*steps*args.times/(t2+t3)/1.0e9))
     
     print("done")
 

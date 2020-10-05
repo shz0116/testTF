@@ -31,7 +31,7 @@ if __name__ == "__main__":
   parser.add_argument("--steps", type=int, default=1)
   parser.add_argument("--warmups", type=int, default=0)
 
-  args = parser.parse_args()
+  args, unknown = parser.parse_known_args()
 
   features     = args.features
   em           = args.em
